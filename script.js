@@ -23,8 +23,14 @@ function generatePassword (){
   var isSpecial = confirm('Do you want to add special characters?');
 
   if(passwordLength < 8 || passwordLength > 128){
+    alert('Invalid password length. Please start over.');
+  } else if(!isLowercase && !isUppercase && !isNumber && !isSpecial){
+    alert('No characters were selected. Please start over');
+  } else {
+    
     
   }
+}
 
 // Write password to the #password input
 function writePassword() {
