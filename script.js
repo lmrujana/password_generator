@@ -47,7 +47,7 @@ function generatePassword (){
     var p_word = "";
 
     //for loop that randomly selects a character and adds it to p_word
-    for(var i = 0; i <= passwordLength; i++){
+    for(var i = 0; i < passwordLength; i++){
       var charTypeSelector = Math.floor(Math.random()*activeChar.length);
       var charType = activeChar[charTypeSelector];
       var charSelector = Math.floor(Math.random()*charType.length);
@@ -60,10 +60,14 @@ function generatePassword (){
 
 // Write password to the #password input
 function writePassword() {
+  activeChar = [];
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  if(password){
   passwordText.value = password;
+  } else {
+  passwordText.value = 'Invalid input. Please enter valid input.';
+  }
 
 }
 
