@@ -1,6 +1,6 @@
 # Password Generator
 
-## Ojective
+## Objective
 
 To create a web app that generates a random password given user specifications. Password must be between 8 and 128 characters long, and it must contain at least one character type (lowercase, uppercase, numbers and/or special).
 
